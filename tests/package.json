@@ -1,0 +1,15 @@
+{
+  "name": "qtruck-tests",
+  "version": "1.0.0",
+  "description": "Projetos de testes de ponta a ponta na web app Qtruck",
+  "main": "index.js",
+  "author": "Jefferson Monteiro",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.4.0",
+    "cypress-browser-permissions": "^1.1.0"
+  },
+  "dependencies": {
+    "cypress-mongodb": "^4.1.1"
+  }
+}
