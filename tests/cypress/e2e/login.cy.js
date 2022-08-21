@@ -1,39 +1,29 @@
 import loginPage from '../support/pages/Login'
 import MapPage from '../support/pages/Map'
 
-
-
 describe('Login', () => {
   it('deve logar com sucesso', () => {
-
     const user = {
       instagram: '@jeff',
       password: '123456',
       name: 'Jeff'
     }
-
-
    loginPage.go()
    loginPage.form(user)
    loginPage.submit() 
    MapPage.loggedUser(user.name)
-
   })
 
   it('nao deve logar com a senha invalida', () => {
-
     const user = {
       instagram: '@jeff',
       password: '@123456'
     }
-
     loginPage.go()
     loginPage.form(user)
     loginPage.submit() 
-    
     loginPage.modal.haveText('Credenciais inválidas, tente novamente!')
   })
-
   it('nao deve logar com o instagram inexistente', () => {
     const user = {
       instagram: '@papitorocks',
